@@ -11,6 +11,6 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
 RUN echo '# Install Ruby Gems to ~/gems' >> ~/.bashrc \
     && echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc \
     && echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc \
-    && source ~/.bashrc
+    && . ~/.bashrc
 
 RUN gem install jekyll bundler
